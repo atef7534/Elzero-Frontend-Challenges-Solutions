@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #eeeeee;
+}
+
+div {
+  width: 200px;
+  height: 200px;
+  background-color: gray;
+  box-shadow:
+    -102px -102px 0 0 #f65314,
+    102px -102px 0 0 #7cbb00,
+    -102px 102px 0 0 #00a1f1,
+    102px 102px 0 0 #ffbb00;
+}

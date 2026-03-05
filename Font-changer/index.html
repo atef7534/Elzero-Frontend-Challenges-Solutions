@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Font changer</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caesar+Dressing&family=Metal+Mania&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <main>
+      <select name="fonts" id="fonts" onchange="showFont(this)">
+        <option value="Open Sans">Open Sans</option>
+        <option value="Caesar Dressing">Caesar</option>
+        <option value="Metal Mania">Metal Mania</option>
+      </select>
+      <div class="test">Testing fonts Here</div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>

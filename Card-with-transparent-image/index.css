@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #eeeeee;
+  --txt-color: #3b74ba;
+  --list-bg: #f6f6f6;
+}
+
+body {
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Arial", sans-serif;
+}
+
+#card {
+  background-color: white;
+  position: relative;
+  padding: 40px 25px 20px;
+  width: 75%;
+  border-radius: 5px;
+  box-shadow: 0 0 8px #dddddd;
+  z-index: 1;
+}
+
+#card::before {
+  content: url(./person-blue-shirt.png);
+  position: absolute;
+  bottom: calc(100% - 30px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#card::after {
+  content: "A+";
+  position: absolute;
+  background-color: var(--txt-color);
+  color: white;
+  padding: 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  bottom: 0;
+  right: 20px;
+  transform: translateY(50%);
+}
+
+.title {
+  text-align: center;
+  color: var(--txt-color);
+  font-size: 2rem;
+  letter-spacing: -2px;
+}
+
+.job {
+  color: grey;
+  text-align: center;
+  padding: 10px 0 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding-block: 20px;
+  border-top: 3px solid var(--bg-color);
+}
+
+li {
+  width: 100%;
+  background-color: var(--list-bg);
+  padding: 15px;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  color: #333;
+}

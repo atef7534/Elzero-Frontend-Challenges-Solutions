@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+:root {
+  --bg-color: #eee;
+  --blue-color: #2196f3;
+  --red-color: #f44336;
+  --wrong-color: #e91e63;
+  --correct-color: #009688;
+  --question-color: #7e7e7e;
+}
+
+#main-content::after {
+  content: "Save 50%";
+  background-color: var(--blue-color);
+  color: white;
+  display: block;
+  position: absolute;
+  padding: 5px 50px 5px 20px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.2rem;
+  top: 20px;
+  right: 11.5%;
+}
+
+#main-content::before {
+  content: "";
+  width: 46px;
+  height: 46px;
+  background-color: var(--bg-color);
+  position: absolute;
+  right: calc(11.5% - 23px);
+  top: 20px;
+  z-index: 1;
+  transform: rotate(45deg);
+}
+
+#main-content {
+  display: flex;
+  gap: 15px;
+  width: 80%;
+  margin-top: 60px;
+}
+
+.col {
+  background-color: white;
+  border-radius: 10px;
+  flex-grow: 1;
+}
+
+.title {
+  padding: 15px;
+  border-radius: 10px 10px 0 0;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.basic .title {
+  background-color: var(--red-color);
+}
+
+.professional .title {
+  background-color: var(--blue-color);
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+
+.question::after {
+  content: "?";
+  position: absolute;
+  right: 20px;
+  background-color: var(--question-color);
+  line-height: 20px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border-radius: 50%;
+  color: white;
+  font-weight: 600;
+}
+
+.correct span,
+.wrong span {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.correct span::before {
+  content: "";
+  display: block;
+  border: 3.5px solid white;
+  border-top: none;
+  border-right: none;
+  height: 4px;
+  width: 8px;
+  transform: rotate(-45deg);
+  line-height: 1;
+}
+
+.wrong span::before {
+  content: "";
+  width: 2px;
+  height: 15px;
+  background-color: white;
+  border-radius: 2px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.wrong span::after {
+  content: "";
+  width: 2px;
+  height: 15px;
+  background-color: white;
+  border-radius: 2px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.correct span {
+  background-color: var(--correct-color);
+}
+
+.wrong span {
+  background-color: var(--wrong-color);
+}

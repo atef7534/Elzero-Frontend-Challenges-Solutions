@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #f5f5f5;
+  --bg-progress: #f1f1f1;
+  --bg-progress-bf: #009688;
+  --right-border-color: #ddd;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: "Cairo", sans-serif;
+}
+
+.profile-info {
+  display: flex;
+  width: 60%;
+  margin: 20px auto;
+  background-color: white;
+  position: relative;
+}
+
+.profile-info::before,
+#points-log::before,
+#trophies::before,
+#news::before,
+#powers::before {
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  height: 1px;
+  background-color: var(--right-border-color);
+  bottom: -15px;
+  left: 0;
+}
+
+.left {
+  min-width: 30%;
+  text-align: center;
+  position: relative;
+  padding: 20px;
+}
+
+.left::after {
+  content: "";
+  width: 1px;
+  height: 100%;
+  border-right: 1px solid var(--right-border-color);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 100%;
+}
+
+.profile-img {
+  width: 180px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+}
+
+.level {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.progress {
+  display: block;
+  width: 90%;
+  height: 20px;
+  background-color: var(--bg-progress);
+  margin: 5px auto;
+  border-radius: 5px;
+}
+
+.progress::before {
+  content: "";
+  width: 80%;
+  display: block;
+  height: 20px;
+  background-color: var(--bg-progress-bf);
+  border-radius: 5px 0 0 5px;
+}
+
+.points {
+  color: #333;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.special {
+  color: var(--bg-progress-bf);
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.right {
+  padding: 20px;
+}
+
+.name {
+  font-size: 1.8rem;
+  color: #333333;
+}
+
+.summary {
+  color: #918684;
+  font-size: 1.1rem;
+}
+
+.active-days {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  color: #333;
+}
+
+#points-log,
+#trophies {
+  padding: 20px;
+  background-color: white;
+  width: 60%;
+  margin: 30px auto;
+  position: relative;
+}
+
+#points-log .points-title,
+#trophies .trophies-title,
+#news .news-title,
+#powers .powers-title {
+  color: white;
+  background-color: #607d8b;
+  width: fit-content;
+  padding: 5px 15px;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.log {
+  list-style-type: none;
+}
+
+.special-red {
+  color: #ea3167;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.log li {
+  color: #333;
+  font-weight: normal;
+  padding: 10px;
+  border-bottom: 1px solid var(--right-border-color);
+}
+
+.log li:last-child {
+  border-bottom: none;
+}
+
+.trophies-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+
+.trophy {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #ddd;
+  object-fit: cover;
+}
+
+#news,
+#powers {
+  background-color: white;
+  padding: 20px;
+  width: 60%;
+  margin: 30px auto;
+  position: relative;
+}
+
+#news .news-script {
+  font-size: 1.2rem;
+  color: #575757;
+  font-weight: normal;
+}
+
+.special-blue {
+  font-size: 21px;
+  font-weight: bold;
+  color: #0075ff;
+}
+
+.powers-list {
+  list-style-type: none;
+}
+
+.powers-list li {
+  padding: 10px 0;
+  color: #575757;
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.powers-list li:last-child {
+  border-bottom: none;
+}
+
+.left-item {
+  font-weight: bold;
+}
+
+.yes {
+  color: green;
+}
+
+.no {
+  color: red;
+}

@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+#head-1 {
+  font-size: 1.2rem;
+  color: #333;
+  padding: 20px 0 0 20px;
+}
+
+h3 {
+  font-size: 15px;
+  font-weight: 550;
+  width: fit-content;
+  margin: 25px 0 0 20px;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+h3::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 2px;
+  background-color: #ddd;
+  bottom: -2px;
+  z-index: -1;
+}
+
+.blue {
+  color: #2f6ed7;
+  border-bottom: 2px solid #2f6ed7;
+}
+
+.circle::after,
+.square::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  transform: translateY(50%);
+}
+
+.square::after {
+  border-radius: 0;
+}
+
+.upper-triangle::after,
+.down-triangle::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border: 8px solid transparent;
+}
+
+.upper-triangle::after {
+  bottom: 0;
+}
+
+.down-triangle::after {
+  bottom: -16px;
+  left: -1px;
+}
+
+.circle.blue::after,
+.square.blue::after {
+  background-color: #2f6ed7;
+}
+
+.upper-triangle.blue::after {
+  border-bottom-color: #2f6ed7;
+}
+
+.down-triangle.blue::after {
+  border-top-color: #2f6ed7;
+}
+
+.upper-triangle.red::after {
+  border-bottom-color: #cf2d2d;
+}
+
+.down-triangle.red::after {
+  border-top-color: #cf2d2d;
+}
+
+.upper-triangle.green::after {
+  border-bottom-color: #3fa520;
+}
+
+.down-triangle.green::after {
+  border-top-color: #3fa520;
+}
+
+.upper-triangle.orange::after {
+  border-bottom-color: #cd661a;
+}
+
+.down-triangle.orange::after {
+  border-top-color: #cd661a;
+}
+
+
+.circle.red::after,
+.square.red::after {
+  background-color: #cf2d2d;
+}
+
+.circle.green::after,
+.square.green::after {
+  background-color: #3fa520;
+}
+
+.circle.orange::after,
+.square.orange::after {
+  background-color: #cd661a;
+}
+
+.red {
+  color: #cf2d2d;
+  border-bottom: 2px solid #cf2d2d;
+}
+
+.green {
+  color: #3fa520;
+  border-bottom: 2px solid #3fa520;
+}
+
+.orange {
+  color: #cd661a;
+  border-bottom: 2px solid #cd661a;
+}
+
+/* Special case */
+.special {
+  margin-bottom: 30px;
+}

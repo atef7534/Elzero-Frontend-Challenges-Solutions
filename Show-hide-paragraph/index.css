@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+}
+
+.click-btn {
+  display: block;
+  padding: 6px 20px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  background-color: #02968b;
+  font-size: 19px;
+  border-radius: 5px;
+  margin: 100px auto 40px;
+}
+
+.paragraph {
+  font-size: 1.1rem;
+  background-color: #eee;
+  padding: 25px;
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}
